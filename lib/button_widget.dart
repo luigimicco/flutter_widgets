@@ -49,10 +49,21 @@ class ButtonWidget extends StatelessWidget {
                 onPressed: () {}),
             SizedBox(height: 20),
             FloatingActionButton(
+                heroTag: "btn1",
                 mini: true,
                 backgroundColor: Colors.green,
                 child: Icon(
                   Icons.mic,
+                  size: 25.0,
+                  color: Colors.white,
+                ),
+                onPressed: () {}),
+            SizedBox(height: 20),
+            FloatingActionButton(
+                heroTag: "btn2",
+                backgroundColor: Colors.green,
+                child: Icon(
+                  Icons.alarm,
                   size: 30.0,
                   color: Colors.white,
                 ),

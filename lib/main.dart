@@ -6,6 +6,7 @@ import 'column_widget.dart';
 import 'row_widget.dart';
 import 'button_widget.dart';
 import 'stack_widget.dart';
+import 'textfield_widget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -50,9 +51,13 @@ class MyApp extends StatelessWidget {
         'Container radius 2': (BuildContext context) =>
             ContainerRadius2Widget(),
         'Column': (BuildContext context) => ColumnWidget(),
+        'Column with rows': (BuildContext context) => ColumnRowWidget(),
         'Row': (BuildContext context) => RowWidget(),
+        'Row with columns': (BuildContext context) => RowColumnWidget(),
         'Button': (BuildContext context) => ButtonWidget(),
         'Stack': (BuildContext context) => StackWidget(),
+        'Stack positioned': (BuildContext context) => StackPositionWidget(),
+        'Textfield': (BuildContext context) => TextfieldWidget(),
       },
     );
   }
@@ -82,9 +87,13 @@ class HomePage extends StatelessWidget {
       "Container radius 1",
       "Container radius 2",
       "Column",
+      "Column with rows",
       "Row",
+      "Row with columns",
       "Button",
-      "Stack"
+      "Stack",
+      "Stack positioned",
+      "Textfield"
     ];
 
     return Scaffold(
@@ -98,27 +107,17 @@ class HomePage extends StatelessWidget {
             return Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-              child: InkWell(
-                onTap: () {
+              child: MaterialButton(
+                minWidth: 250.0,
+                onPressed: () {
                   Navigator.of(context).pushNamed('${widgetList[index]}');
                 },
-                child: Card(
-                  elevation: 5.0,
-                  child: new Container(
-                      color: Colors.white,
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(16.0),
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.keyboard_arrow_right),
-                          Text(
-                            widgetList[index],
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 20.0),
-                          ),
-                        ],
-                      )),
-                ),
+                colorBrightness: Brightness.dark,
+                color: Colors.blueGrey,
+                elevation: 20.0,
+                splashColor: Colors.green,
+                highlightElevation: 1.0,
+                child: Text(widgetList[index]),
               ),
             );
           }),
