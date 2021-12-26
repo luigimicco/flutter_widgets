@@ -8,11 +8,13 @@ class TextWidget extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
+            SizedBox(height: 20),
             Text(
-              "Hello Flutter",
+              "Ciao Flutter",
             ),
+            SizedBox(height: 20),
             Text(
-              "Hello Flutter It is Awesome WOW",
+              "Ciao Flutter è fantastico WOW",
               textAlign: TextAlign.right,
               textDirection: TextDirection.ltr,
               overflow: TextOverflow.ellipsis,

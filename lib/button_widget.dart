@@ -8,14 +8,16 @@ class ButtonWidget extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
+            SizedBox(height: 20),
             ElevatedButton(
               style: buttonStyle,
-              onPressed: null,
-              child: Text('Raised Button'),
+              onPressed: () {},
+              child: Text('Elevated Button'),
             ),
+            SizedBox(height: 20),
             MaterialButton(
               minWidth: 250.0,
-              onPressed: null,
+              onPressed: () {},
               colorBrightness: Brightness.dark,
               color: Colors.deepPurpleAccent,
               elevation: 20.0,
@@ -24,16 +26,19 @@ class ButtonWidget extends StatelessWidget {
               highlightElevation: 1.0,
               child: Text("Material Button"),
             ),
+            SizedBox(height: 20),
             TextButton(
-              onPressed: null,
+              onPressed: () {},
               child: Text("Text Button"),
               style: buttonStyle,
             ),
+            SizedBox(height: 20),
             OutlinedButton(
               onPressed: () {},
               child: Text("Outlined Button"),
               style: buttonStyle,
             ),
+            SizedBox(height: 20),
             IconButton(
                 color: Colors.purple,
                 splashColor: Colors.yellow,

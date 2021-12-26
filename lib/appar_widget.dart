@@ -1,32 +1,35 @@
 import 'package:flutter/material.dart';
 
-class AppBarWidget extends StatelessWidget{
+class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
     );
   }
-
 }
 
-
-/*
-* TODO Simple AppBar with Centre Title
-*
-* AppBar(
+class AppBarSimpleWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.red,
-        title: new Text("Title",),
+        title: new Text(
+          "Title",
+        ),
         elevation: 4.0,
         centerTitle: true,
       ),
-* */
+    );
+  }
+}
 
-
-/*
-*  TODO App Bar with a List of Action Buttons
-*
-*  AppBar(
+class AppBarActionWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         title: new Text("Title"),
         actions: <Widget>[
           new IconButton(
@@ -39,14 +42,15 @@ class AppBarWidget extends StatelessWidget{
           ),
         ],
       ),
-*
-* */
+    );
+  }
+}
 
-
-/*
-* TODO AppBar with Different IconTheme & TextTheme
-*
-* AppBar(
+class AppBarThemeWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: new Text("Title"),
         actions: <Widget>[
@@ -58,21 +62,17 @@ class AppBarWidget extends StatelessWidget{
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
-        textTheme: TextTheme(
-          title: TextStyle(
-            color: Colors.white,
-            fontSize: 20.0
-          ),
-        ),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20.0),
       ),
-*
-* */
+    );
+  }
+}
 
-
-/*
-* TODO AppBar with only Title and Subtitle at Centre
-*
-* AppBar(
+class AppBarSubtitleWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Center(
           child: Column(
@@ -92,13 +92,15 @@ class AppBarWidget extends StatelessWidget{
           ),
         ),
       ),
-*
-* */
+    );
+  }
+}
 
-/*
-* TODO AppBar with image
-*
-* AppBar(
+class AppBarImageWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.yellow,
         title: Row(
@@ -115,14 +117,15 @@ class AppBarWidget extends StatelessWidget{
           ],
         ),
       ),
-*
-* */
+    );
+  }
+}
 
-
-/*
-* TODO Transparent AppBar
-*
-* AppBar(
+class AppBarTransparentWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Text("Transparent AppBar"),
         actions: <Widget>[
@@ -134,5 +137,6 @@ class AppBarWidget extends StatelessWidget{
           )
         ],
       ),
-*
-* */
+    );
+  }
+}

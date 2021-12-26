@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RowWidget extends StatelessWidget{
-
-  final bigStyle = TextStyle(
-      color: Colors.black,
-      fontSize: 25.0
-      );
+class RowWidget extends StatelessWidget {
+  final bigStyle = TextStyle(color: Colors.black, fontSize: 25.0);
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +16,36 @@ class RowWidget extends StatelessWidget{
                 size: 100.0,
                 textColor: Colors.red,
               ),
-              Text("Column 2", style: bigStyle,),
+              Container(
+                color: Colors.red,
+                height: 100.0,
+                width: 50.0,
+                child: Text(
+                  "2",
+                  style: bigStyle,
+                ),
+              ),
+              Text(
+                "3",
+                style: bigStyle,
+              ),
               Container(
                 color: Colors.green,
                 height: 100.0,
                 width: 100.0,
-              )
+                child: Text(
+                  "4",
+                  style: bigStyle,
+                ),
+              ),
+              Text(
+                "5",
+                style: bigStyle,
+              ),
             ],
           ),
-        )
-    );
+        ));
   }
-
 }
 
 
