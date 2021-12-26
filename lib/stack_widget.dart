@@ -21,7 +21,12 @@ class StackWidget extends StatelessWidget {
           Container(
             height: 200.0,
             width: 200.0,
-            color: Colors.yellow,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                color: Colors.white,
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage('https://picsum.photos/200/300'))),
           )
         ],
       ),

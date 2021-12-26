@@ -22,7 +22,6 @@ class ButtonWidget extends StatelessWidget {
               color: Colors.deepPurpleAccent,
               elevation: 20.0,
               splashColor: Colors.green,
-              //highlightColor: Colors.red,
               highlightElevation: 1.0,
               child: Text("Material Button"),
             ),
@@ -48,41 +47,24 @@ class ButtonWidget extends StatelessWidget {
                   size: 40.0,
                 ),
                 onPressed: () {}),
+            SizedBox(height: 20),
+            FloatingActionButton(
+                mini: true,
+                backgroundColor: Colors.green,
+                child: Icon(
+                  Icons.mic,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+                onPressed: () {}),
           ],
         ),
       ),
     );
   }
 
-  ButtonStyle buttonStyle = ElevatedButton.styleFrom(
-    onPrimary: Colors.green,
-    primary: Colors.yellow,
-    minimumSize: Size(88, 36),
-    padding: EdgeInsets.symmetric(horizontal: 16),
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-    ),
-    elevation: 20.0,
+  ButtonStyle buttonStyle = ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+    overlayColor: MaterialStateProperty.all<Color>(Colors.yellow),
   );
 }
-
-/*
-*
-
-* TODO OutlineButton
-
-* TODO Simple Circular Button using FloatingActionButton (Mini and Normal Size)
-*
-* FloatingActionButton(
-                backgroundColor: Colors.orange,
-                child: Icon(Icons.mic, size: 30.0, color: Colors.white,),
-                onPressed: (){}),
-
-
-* FloatingActionButton(
-                mini: true,
-                backgroundColor: Colors.green,
-                child: Icon(Icons.mic, size: 30.0, color: Colors.white,),
-                onPressed: (){}),
-
-*/

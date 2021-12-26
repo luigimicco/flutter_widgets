@@ -63,8 +63,8 @@ class ContainerShadowWidget extends StatelessWidget {
               width: 8.0,
             ),
           ),
-          child: Center(
-              child: const Text('Hello Flutter', textAlign: TextAlign.center)),
+          child:
+              Center(child: const Text('Flutter', textAlign: TextAlign.center)),
         ),
       ),
     );
@@ -114,8 +114,8 @@ class ContainerRoundedWidget extends StatelessWidget {
               color: Colors.red,
             ),
           ),
-          child: Center(
-              child: const Text('Hello Flutter', textAlign: TextAlign.center)),
+          child:
+              Center(child: const Text('Flutter', textAlign: TextAlign.center)),
         ),
       ),
     );
@@ -170,15 +170,82 @@ class ContainerListWidget extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(),
-      body: Center(
-        child: Container(
-          height: 100.0,
-          width: 200.0,
-          decoration: BoxDecoration(color: Colors.white, boxShadow: [
-            BoxShadow(color: Colors.red, blurRadius: 12.0),
-            BoxShadow(color: Colors.green, blurRadius: 40.0)
-          ]),
-        ),
+      body: new ListView(
+        shrinkWrap: true,
+        children: <Widget>[
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+          Text(
+            "Ciao Flutter",
+          ),
+        ],
       ),
     );
   }
@@ -221,7 +288,7 @@ class ContainerCircularWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(200.0),
             color: Colors.green,
           ),
-          child: Text('Hello'),
+          child: Text('Flutter'),
         ),
       ),
     );
@@ -244,7 +311,7 @@ class ContainerRadius1Widget extends StatelessWidget {
                 left: Radius.circular(20.0), right: Radius.circular(80.0)),
             color: Colors.green,
           ),
-          child: Text('Hello'),
+          child: Text('Flutter'),
         ),
       ),
     );
@@ -267,7 +334,7 @@ class ContainerRadius2Widget extends StatelessWidget {
                 top: Radius.circular(20.0), bottom: Radius.circular(80.0)),
             color: Colors.green,
           ),
-          child: Text('Hello'),
+          child: Text('Flutter'),
         ),
       ),
     );

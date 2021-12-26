@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'container_widget.dart';
-import 'package:flutter_widgets/text_widget.dart';
+import 'text_widget.dart';
 import 'appar_widget.dart';
-import 'package:flutter_widgets/column_widget.dart';
-import 'package:flutter_widgets/row_widget.dart';
+import 'column_widget.dart';
+import 'row_widget.dart';
 import 'button_widget.dart';
-import 'package:flutter_widgets/stack_widget.dart';
+import 'stack_widget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -110,12 +110,12 @@ class HomePage extends StatelessWidget {
                       padding: EdgeInsets.all(16.0),
                       child: Row(
                         children: <Widget>[
+                          Icon(Icons.keyboard_arrow_right),
                           Text(
                             widgetList[index],
                             style:
                                 TextStyle(color: Colors.black, fontSize: 20.0),
                           ),
-                          Icon(Icons.keyboard_arrow_right)
                         ],
                       )),
                 ),
