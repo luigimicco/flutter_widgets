@@ -8,62 +8,73 @@ import 'widgets/button_widget.dart';
 import 'widgets/stack_widget.dart';
 import 'widgets/textfield_widget.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Widgets Demo',
       debugShowCheckedModeBanner: false,
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: new HomePage(),
+      home: const HomePage(),
       routes: <String, WidgetBuilder>{
-        'Text': (BuildContext context) => TextWidget(),
-        'Appbar (no title)': (BuildContext context) => AppBarWidget(),
-        'Appbar simple': (BuildContext context) => AppBarSimpleWidget(),
-        'Appbar with buttons': (BuildContext context) => AppBarActionWidget(),
+        'Text': (BuildContext context) => const TextWidget(),
+        'Appbar (no title)': (BuildContext context) => const AppBarWidget(),
+        'Appbar simple': (BuildContext context) => const AppBarSimpleWidget(),
+        'Appbar with buttons': (BuildContext context) =>
+            const AppBarActionWidget(),
         'Appbar with subtitle': (BuildContext context) =>
-            AppBarSubtitleWidget(),
-        'Appbar with image': (BuildContext context) => AppBarImageWidget(),
-        'Appbar with theme': (BuildContext context) => AppBarThemeWidget(),
+            const AppBarSubtitleWidget(),
+        'Appbar with image': (BuildContext context) =>
+            const AppBarImageWidget(),
+        'Appbar with theme': (BuildContext context) =>
+            const AppBarThemeWidget(),
         'Appbar transparent': (BuildContext context) =>
-            AppBarTransparentWidget(),
-        'Container simple': (BuildContext context) => ContainerWidget(),
+            const AppBarTransparentWidget(),
+        'Container simple': (BuildContext context) => const ContainerWidget(),
         'Container media query': (BuildContext context) =>
-            ContainerMeadiaQueryWidget(),
-        'Container shadow': (BuildContext context) => ContainerShadowWidget(),
-        'Container rounded': (BuildContext context) => ContainerRoundedWidget(),
+            const ContainerMeadiaQueryWidget(),
+        'Container shadow': (BuildContext context) =>
+            const ContainerShadowWidget(),
+        'Container rounded': (BuildContext context) =>
+            const ContainerRoundedWidget(),
         'Container with align': (BuildContext context) =>
-            ContainerAlignedWidget(),
+            const ContainerAlignedWidget(),
         'Container with constraints': (BuildContext context) =>
-            ContainerConstrainWidget(),
-        'Container with list': (BuildContext context) => ContainerListWidget(),
+            const ContainerConstrainWidget(),
+        'Container with list': (BuildContext context) =>
+            const ContainerListWidget(),
         'Container with image': (BuildContext context) =>
-            ContainerImageWidget(),
+            const ContainerImageWidget(),
         'Container circular': (BuildContext context) =>
-            ContainerCircularWidget(),
+            const ContainerCircularWidget(),
         'Container radius 1': (BuildContext context) =>
-            ContainerRadius1Widget(),
+            const ContainerRadius1Widget(),
         'Container radius 2': (BuildContext context) =>
-            ContainerRadius2Widget(),
-        'Column': (BuildContext context) => ColumnWidget(),
-        'Column with rows': (BuildContext context) => ColumnRowWidget(),
-        'Row': (BuildContext context) => RowWidget(),
-        'Row with columns': (BuildContext context) => RowColumnWidget(),
-        'Button': (BuildContext context) => ButtonWidget(),
-        'Stack': (BuildContext context) => StackWidget(),
-        'Stack positioned': (BuildContext context) => StackPositionWidget(),
-        'Textfield': (BuildContext context) => TextfieldWidget(),
+            const ContainerRadius2Widget(),
+        'Column': (BuildContext context) => const ColumnWidget(),
+        'Column with rows': (BuildContext context) => const ColumnRowWidget(),
+        'Row': (BuildContext context) => const RowWidget(),
+        'Row with columns': (BuildContext context) => const RowColumnWidget(),
+        'Button': (BuildContext context) => const ButtonWidget(),
+        'Stack': (BuildContext context) => const StackWidget(),
+        'Stack positioned': (BuildContext context) =>
+            const StackPositionWidget(),
+        'Textfield': (BuildContext context) => const TextfieldWidget(),
       },
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var widgetList = [
@@ -98,7 +109,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Widgets"),
+        title: const Text("Widgets"),
       ),
       body: ListView.builder(
           itemCount: widgetList.length,
@@ -110,7 +121,7 @@ class HomePage extends StatelessWidget {
               child: MaterialButton(
                 minWidth: 250.0,
                 onPressed: () {
-                  Navigator.of(context).pushNamed('${widgetList[index]}');
+                  Navigator.of(context).pushNamed(widgetList[index]);
                 },
                 colorBrightness: Brightness.dark,
                 color: Colors.blueGrey,

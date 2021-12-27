@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class RowWidget extends StatelessWidget {
-  final bigStyle = TextStyle(color: Colors.black, fontSize: 25.0);
+  const RowWidget({Key? key}) : super(key: key);
+
+  final bigStyle = const TextStyle(color: Colors.black, fontSize: 25.0);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class RowWidget extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              FlutterLogo(
+              const FlutterLogo(
                 size: 100.0,
                 textColor: Colors.red,
               ),
@@ -49,7 +51,9 @@ class RowWidget extends StatelessWidget {
 }
 
 class RowColumnWidget extends StatelessWidget {
-  final bigStyle = TextStyle(color: Colors.black, fontSize: 25.0);
+  const RowColumnWidget({Key? key}) : super(key: key);
+
+  final bigStyle = const TextStyle(color: Colors.black, fontSize: 25.0);
 
   @override
   Widget build(BuildContext context) {
@@ -62,12 +66,15 @@ class RowColumnWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text("Text 1"),
-              Text("Text 2"),
+              const Text("Text 1"),
+              const Text("Text 2"),
               Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[Text("Col Text 1"), Text("Col Text 2")],
+                children: const <Widget>[
+                  Text("Col Text 1"),
+                  Text("Col Text 2")
+                ],
               ),
             ],
           ),

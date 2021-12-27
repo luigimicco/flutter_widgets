@@ -1,46 +1,48 @@
 import 'package:flutter/material.dart';
 
 class TextfieldWidget extends StatelessWidget {
+  const TextfieldWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
         child: Column(
-          children: <Widget>[
+          children: const <Widget>[
             Padding(
-              padding: const EdgeInsets.all(30.0),
+              padding: EdgeInsets.all(30.0),
               child: TextField(
-                decoration: new InputDecoration(
-                    border: new OutlineInputBorder(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
                       borderSide: BorderSide(
                         width: 0,
                         style: BorderStyle.none,
                       ),
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(10.0),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
                       ),
                     ),
                     filled: true,
-                    hintStyle: new TextStyle(color: Colors.black45),
+                    hintStyle: TextStyle(color: Colors.black45),
                     hintText: "Type in your text"),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(30.0),
+              padding: EdgeInsets.all(30.0),
               child: TextField(
-                decoration: new InputDecoration(
-                    border: new OutlineInputBorder(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
                       borderSide: BorderSide(
                         width: 2,
                         style: BorderStyle.none,
                       ),
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(10.0),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
                       ),
                     ),
                     filled: true,
-                    hintStyle: new TextStyle(color: Colors.black45),
+                    hintStyle: TextStyle(color: Colors.black45),
                     hintText: "Type in your text"),
               ),
             )

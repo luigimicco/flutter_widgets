@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ContainerWidget extends StatelessWidget {
+  const ContainerWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,13 +13,13 @@ class ContainerWidget extends StatelessWidget {
           height: 200.0,
           width: 200.0,
           alignment: Alignment.center,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(20.0),
             ),
             color: Colors.green,
           ),
-          child: Text('Flutter'),
+          child: const Text('Flutter'),
         ),
       ),
     );
@@ -25,6 +27,8 @@ class ContainerWidget extends StatelessWidget {
 }
 
 class ContainerMeadiaQueryWidget extends StatelessWidget {
+  const ContainerMeadiaQueryWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +38,8 @@ class ContainerMeadiaQueryWidget extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.all(25.0),
-          decoration: FlutterLogoDecoration(),
+          margin: const EdgeInsets.all(25.0),
+          decoration: const FlutterLogoDecoration(),
         ),
       ),
     );
@@ -43,6 +47,8 @@ class ContainerMeadiaQueryWidget extends StatelessWidget {
 }
 
 class ContainerShadowWidget extends StatelessWidget {
+  const ContainerShadowWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,43 +58,19 @@ class ContainerShadowWidget extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.all(25.0),
-          decoration: new ShapeDecoration(
+          margin: const EdgeInsets.all(25.0),
+          decoration: ShapeDecoration(
             color: Colors.white,
-            shadows: <BoxShadow>[
+            shadows: const <BoxShadow>[
               BoxShadow(color: Colors.black, blurRadius: 15.0)
             ],
-            shape: new Border.all(
+            shape: Border.all(
               color: Colors.red,
               width: 8.0,
             ),
           ),
           child:
-              Center(child: const Text('Flutter', textAlign: TextAlign.center)),
-        ),
-      ),
-    );
-  }
-}
-
-class Container4Widget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(),
-      body: Center(
-        child: Container(
-          height: 200.0,
-          width: 200.0,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(20.0),
-            ),
-            color: Colors.green,
-          ),
-          child: Text('Flutter'),
+              const Center(child: Text('Flutter', textAlign: TextAlign.center)),
         ),
       ),
     );
@@ -96,6 +78,8 @@ class Container4Widget extends StatelessWidget {
 }
 
 class ContainerRoundedWidget extends StatelessWidget {
+  const ContainerRoundedWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,17 +89,17 @@ class ContainerRoundedWidget extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.all(25.0),
-          decoration: new BoxDecoration(
+          margin: const EdgeInsets.all(25.0),
+          decoration: BoxDecoration(
             color: Colors.yellow,
-            borderRadius: new BorderRadius.circular(55.0),
-            border: new Border.all(
+            borderRadius: BorderRadius.circular(55.0),
+            border: Border.all(
               width: 5.0,
               color: Colors.red,
             ),
           ),
           child:
-              Center(child: const Text('Flutter', textAlign: TextAlign.center)),
+              const Center(child: Text('Flutter', textAlign: TextAlign.center)),
         ),
       ),
     );
@@ -123,6 +107,8 @@ class ContainerRoundedWidget extends StatelessWidget {
 }
 
 class ContainerAlignedWidget extends StatelessWidget {
+  const ContainerAlignedWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -130,13 +116,13 @@ class ContainerAlignedWidget extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(20.0),
           width: double.infinity,
           height: 300.0,
           color: Colors.red,
           alignment: Alignment.topRight,
-          padding: EdgeInsets.all(20.0),
-          child: FlutterLogo(
+          padding: const EdgeInsets.all(20.0),
+          child: const FlutterLogo(
             size: 100.0,
           ),
         ),
@@ -146,6 +132,8 @@ class ContainerAlignedWidget extends StatelessWidget {
 }
 
 class ContainerConstrainWidget extends StatelessWidget {
+  const ContainerConstrainWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,8 +141,8 @@ class ContainerConstrainWidget extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(20.0),
-          constraints: BoxConstraints(maxWidth: 400.0, minWidth: 200.0),
+          margin: const EdgeInsets.all(20.0),
+          constraints: const BoxConstraints(maxWidth: 400.0, minWidth: 200.0),
           width: 50.0,
           alignment: Alignment.topCenter,
           child: Image.network('https://picsum.photos/500/400'),
@@ -165,14 +153,16 @@ class ContainerConstrainWidget extends StatelessWidget {
 }
 
 class ContainerListWidget extends StatelessWidget {
+  const ContainerListWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(),
-      body: new ListView(
+      body: ListView(
         shrinkWrap: true,
-        children: <Widget>[
+        children: const <Widget>[
           Text(
             "Ciao Flutter",
           ),
@@ -252,6 +242,8 @@ class ContainerListWidget extends StatelessWidget {
 }
 
 class ContainerImageWidget extends StatelessWidget {
+  const ContainerImageWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -264,7 +256,7 @@ class ContainerImageWidget extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: Colors.white,
-              image: DecorationImage(
+              image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage('https://picsum.photos/200/300'))),
         ),
@@ -274,6 +266,8 @@ class ContainerImageWidget extends StatelessWidget {
 }
 
 class ContainerCircularWidget extends StatelessWidget {
+  const ContainerCircularWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -288,7 +282,7 @@ class ContainerCircularWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(200.0),
             color: Colors.green,
           ),
-          child: Text('Flutter'),
+          child: const Text('Flutter'),
         ),
       ),
     );
@@ -296,6 +290,8 @@ class ContainerCircularWidget extends StatelessWidget {
 }
 
 class ContainerRadius1Widget extends StatelessWidget {
+  const ContainerRadius1Widget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -306,12 +302,12 @@ class ContainerRadius1Widget extends StatelessWidget {
           height: 200.0,
           width: 200.0,
           alignment: Alignment.center,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.horizontal(
                 left: Radius.circular(20.0), right: Radius.circular(80.0)),
             color: Colors.green,
           ),
-          child: Text('Flutter'),
+          child: const Text('Flutter'),
         ),
       ),
     );
@@ -319,6 +315,8 @@ class ContainerRadius1Widget extends StatelessWidget {
 }
 
 class ContainerRadius2Widget extends StatelessWidget {
+  const ContainerRadius2Widget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -329,12 +327,12 @@ class ContainerRadius2Widget extends StatelessWidget {
           height: 200.0,
           width: 200.0,
           alignment: Alignment.center,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20.0), bottom: Radius.circular(80.0)),
             color: Colors.green,
           ),
-          child: Text('Flutter'),
+          child: const Text('Flutter'),
         ),
       ),
     );

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
+  const TextWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
         child: Column(
-          children: <Widget>[
+          children: const <Widget>[
             SizedBox(height: 20),
             Text(
               "Ciao Flutter",

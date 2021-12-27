@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
+  const AppBarWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,12 +12,14 @@ class AppBarWidget extends StatelessWidget {
 }
 
 class AppBarSimpleWidget extends StatelessWidget {
+  const AppBarSimpleWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: new Text(
+        title: const Text(
           "Title",
         ),
         elevation: 4.0,
@@ -26,18 +30,20 @@ class AppBarSimpleWidget extends StatelessWidget {
 }
 
 class AppBarActionWidget extends StatelessWidget {
+  const AppBarActionWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Text("Title"),
+        title: const Text("Title"),
         actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
+          IconButton(
+            icon: const Icon(Icons.search),
             onPressed: () {},
           ),
-          new IconButton(
-            icon: new Icon(Icons.add),
+          IconButton(
+            icon: const Icon(Icons.add),
             onPressed: () {},
           ),
         ],
@@ -47,28 +53,32 @@ class AppBarActionWidget extends StatelessWidget {
 }
 
 class AppBarThemeWidget extends StatelessWidget {
+  const AppBarThemeWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
-        title: new Text("Title"),
+        title: const Text("Title"),
         actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
+          IconButton(
+            icon: const Icon(Icons.search),
             onPressed: () {},
           ),
         ],
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.white,
         ),
-        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20.0),
+        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20.0),
       ),
     );
   }
 }
 
 class AppBarSubtitleWidget extends StatelessWidget {
+  const AppBarSubtitleWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,12 +89,12 @@ class AppBarSubtitleWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text(
+            children: const <Widget>[
+              Text(
                 "Title",
                 style: TextStyle(fontSize: 18.0),
               ),
-              new Text(
+              Text(
                 "subtitle",
                 style: TextStyle(fontSize: 14.0),
               ),
@@ -97,6 +107,8 @@ class AppBarSubtitleWidget extends StatelessWidget {
 }
 
 class AppBarImageWidget extends StatelessWidget {
+  const AppBarImageWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,11 +118,11 @@ class AppBarImageWidget extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            new FlutterLogo(),
+          children: const <Widget>[
+            FlutterLogo(),
             Padding(
-              padding: const EdgeInsets.only(left: 16.0),
-              child: new Text(
+              padding: EdgeInsets.only(left: 16.0),
+              child: Text(
                 "Title with image",
               ),
             ),
@@ -122,15 +134,17 @@ class AppBarImageWidget extends StatelessWidget {
 }
 
 class AppBarTransparentWidget extends StatelessWidget {
+  const AppBarTransparentWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text("Transparent AppBar"),
+        title: const Text("Transparent AppBar"),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
             ),
             onPressed: () {},

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class StackWidget extends StatelessWidget {
+  const StackWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +26,7 @@ class StackWidget extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 color: Colors.white,
-                image: DecorationImage(
+                image: const DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage('https://picsum.photos/200/300'))),
           )
@@ -35,6 +37,8 @@ class StackWidget extends StatelessWidget {
 }
 
 class StackPositionWidget extends StatelessWidget {
+  const StackPositionWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
