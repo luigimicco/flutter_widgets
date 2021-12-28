@@ -1,3 +1,8 @@
-# Basic Widgets Examples
+# Common widgets
 
-This is aimed for complete beginners in Flutter, to get them acquainted with the various basic widgets in Flutter. 
+A simple project for Flutter.
+
+![](/screenshots/first.png) 
+## Getting Started
+
+This project is a starting point for a Flutter application.
